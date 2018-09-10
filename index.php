@@ -189,6 +189,19 @@ if($method == 'POST')
 			$speech .= "Which would you prefer?";
 			
 		}
+		else if ($com == 'listfamily')
+		{
+			$speech = "You can see values for following Product Families";
+			$speech .= "\r\n";
+			foreach ($someobj["results"] as $value) 
+			{
+				
+				$speech .= $value["FAMILY_NAME"];
+				$speech .= "\r\n";
+			}
+			$speech .= "Which would you prefer?";
+			
+		}
 		
 			
 	}
