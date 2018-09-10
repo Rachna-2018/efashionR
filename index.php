@@ -124,9 +124,11 @@ if($method == 'POST')
             		if($ARTICLE !='0'){$disarticle = " for article ";} else	{ $disarticle = ""; }
 			if($SHOPNAME != '0') { $disshop = " of shop "; } else{	$disshop = "";	}
 			if($YR != '0')	{      $disyear = " for year ";} else {$disyear = "";}
+			if($QTR != '0')	{      $disqtr = " for quarter ";} else {$disqtr = "";}
+			if($MTH != '0')	{      $dismth = " for month ";} else {$dismth = "";}
 			foreach ($someobj["results"] as $value) 
 			{
-				$speech .= $distext. $value["AMOUNT"].$disshop.$value["SHOP_NAME"].$discity.$value["CITY"].$disstate.$value["STATE"].$disyear.$value["YR"].$disfamily.$value["FAMILY_NAME"].$discategory.$value["CATEGORY"].$disarticle.$value["ARTICLE_LABEL"];
+				$speech .= $distext. $value["AMOUNT"].$disshop.$value["SHOP_NAME"].$discity.$value["CITY"].$disstate.$value["STATE"].$disqtr.$value["QTR"].$dismth.$value["MTH"].$disyear.$value["YR"].$disfamily.$value["FAMILY_NAME"].$discategory.$value["CATEGORY"].$disarticle.$value["ARTICLE_LABEL"];
 				$speech .= "\r\n";
 			 }
 			//if($speech != "") { $speech .= "I can drill down further\n";}
