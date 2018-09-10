@@ -52,11 +52,9 @@ if($method == 'POST')
 		$ARTICLE = str_replace(' ', '', $ARTICLE);
 		
 		
-		if($CITY=="" )
-		{
-			$CITY='0';
-			
-		}
+		if($CITY=="" ){	$CITY='0';}
+		if($STATE=="" ){$STATE='0';}
+		
 		$userespnose = array("EACH", "EVERY","ALL");
 		if(in_array($STATE, $userespnose))
 		{
