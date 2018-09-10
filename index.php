@@ -73,8 +73,8 @@ if($method == 'POST')
 		if (in_array($ARTICLE, $userespnose)) {$ARTICLE='0';}    
 		    
 		
-		echo $MTH;
-		echo $QTR;
+	//	echo $MTH;
+	//	echo $QTR;
 		    
 		
 		
