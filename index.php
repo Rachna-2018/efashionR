@@ -57,7 +57,8 @@ if($method == 'POST')
 		$ARTICLE= strtoupper($ARTICLE);
 		$ARTICLE = str_replace(' ', '', $ARTICLE);
 		
-		
+		echo $MTH;
+		echo $QTR;
 		if($CITY=="" ){	$CITY='0';}
 		if($STATE=="" ){$STATE='0';}
 		
