@@ -40,6 +40,9 @@ if($method == 'POST')
 		{	$ARTICLE= $json->queryResult->parameters->ARTICLE; } else {$ARTICLE = '0';}
 		//$SHOPNAME= $json->queryResult->parameters->SHOPNAME;
 		$SHOPNAME= strtoupper($SHOPNAME);
+		$YR= strtoupper($YR);
+		$MTH= strtoupper($MTH);
+		$QTR= strtoupper($QTR);
 		$SHOPNAME = str_replace(' ', '', $SHOPNAME);
 		$CITY = str_replace(' ', '', $CITY);
 		$STATE = str_replace(' ', '', $STATE);
