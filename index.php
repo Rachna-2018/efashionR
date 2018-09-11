@@ -230,7 +230,7 @@ if($method == 'POST')
 		}
 	else if ($com == 'listyear')
 		{
-			$speech = "You can see values for following Product categories";
+			$speech = "You can see values for following years";
 			$speech .= "\r\n";
 			foreach ($someobj["results"] as $value) 
 			{
