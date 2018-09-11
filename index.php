@@ -9,8 +9,8 @@ if($method == 'POST')
 	$com = strtolower($com);
 	
 		
-	if ($com == 'listcity' or $com == 'liststates' or $com == 'amountsold' or $com == 'margin' or $com == 'qtysold' or $com=='shoplist' or $com=='listfamily' or $com=='listcategory' or $com=='listarticle') 
-	{
+	//if ($com == 'listcity' or $com == 'liststates' or $com == 'amountsold' or $com == 'margin' or $com == 'qtysold' or $com=='shoplist' or $com=='listfamily' or $com=='listcategory' or $com=='listarticle') 
+	//{
 		if(isset($json->queryResult->parameters->STATE))
 		{	$STATE= $json->queryResult->parameters->STATE; } else {$STATE = '0';}
 		$STATE= strtoupper($STATE);
@@ -202,6 +202,32 @@ if($method == 'POST')
 			$speech .= "Which would you prefer?";
 			
 		}
+		else if ($com == 'listcategory')
+		{
+			$speech = "You can see values for following Product categories";
+			$speech .= "\r\n";
+			foreach ($someobj["results"] as $value) 
+			{
+				
+				$speech .= $value["CATEGORY"];
+				$speech .= "\r\n";
+			}
+			$speech .= "Which would you prefer?";
+			
+		}
+		else if ($com == 'listarticle')
+		{
+			$speech = "You can see values for following Product categories";
+			$speech .= "\r\n";
+			foreach ($someobj["results"] as $value) 
+			{
+				
+				$speech .= $value["ARTICLE_LABEL"];
+				$speech .= "\r\n";
+			}
+			$speech .= "Which would you prefer?";
+			
+		//}
 		
 			
 	}
