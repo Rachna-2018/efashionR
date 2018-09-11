@@ -217,7 +217,7 @@ if($method == 'POST')
 		}
 		else if ($com == 'listarticle')
 		{
-			$speech = "You can see values for following Product categories";
+			$speech = "You can see values for following Product articles";
 			$speech .= "\r\n";
 			foreach ($someobj["results"] as $value) 
 			{
