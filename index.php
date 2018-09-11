@@ -227,10 +227,23 @@ if($method == 'POST')
 			}
 			$speech .= "Which would you prefer?";
 			
-		//}
+		}
+	else if ($com == 'listyear')
+		{
+			$speech = "You can see values for following Product categories";
+			$speech .= "\r\n";
+			foreach ($someobj["results"] as $value) 
+			{
+				
+				$speech .= $value["YR"];
+				$speech .= "\r\n";
+			}
+			$speech .= "Which would you prefer?";
+			
+		}
 		
 			
-	}
+	//}
 	
 	//echo $FAMILY;
 	$response = new \stdClass();
