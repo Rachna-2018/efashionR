@@ -61,7 +61,7 @@ if($method == 'POST')
 		if($CITY=="" ){	$CITY='0';}
 		if($STATE=="" ){$STATE='0';}
 		
-		$userespnose = array("PLEASEIGNORE", "IGNORE","IGNOREIT", "ANYVALUE", "ANY" , "NOIDEA");
+		$userespnose = array("PLEASEIGNORE", "IGNORE","IGNOREIT", "ANYVALUE");
 		if (in_array($STATE, $userespnose)) {$STATE='0';}
 		if (in_array($CITY, $userespnose)) {$CITY='0';}
 		if (in_array($SHOPNAME, $userespnose)) {$SHOPNAME='0';}
