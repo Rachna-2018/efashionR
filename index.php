@@ -61,16 +61,17 @@ if($method == 'POST')
 		if($CITY=="" ){	$CITY='0';}
 		if($STATE=="" ){$STATE='0';}
 		
-		$userespnose = array("PLEASEIGNORE", "IGNORE","IGNOREIT", "ANYVALUE");
+		$userespnose = array("PLEASEIGNORE", "IGNORE","IGNOREIT", "ANYVALUE", "ANY", "NOIDEA");
 		if (in_array($STATE, $userespnose)) {$STATE='0';}
 		if (in_array($CITY, $userespnose)) {$CITY='0';}
 		if (in_array($SHOPNAME, $userespnose)) {$SHOPNAME='0';}
 		if (in_array($YR, $userespnose)) {$YR='0';}
 		if (in_array($QTR, $userespnose)) {$QTR='0';}
 		if (in_array($MTH, $userespnose)) {$MTH='0';}
-		if (in_array($FAMILY, $userespnose)) {$FAMILY='0';}
-		if (in_array($CATEGORY, $userespnose)) {$CATEGORY='0';}
-		if (in_array($ARTICLE, $userespnose)) {$ARTICLE='0';}    
+		$useres = array("PLEASEIGNORE", "IGNORE","IGNOREIT", "ANYVALUE");
+		if (in_array($FAMILY, $useres)) {$FAMILY='0';}
+		if (in_array($CATEGORY, $useres)) {$CATEGORY='0';}
+		if (in_array($ARTICLE,$useres)) {$ARTICLE='0';}    
 		    
 		
 	//	echo $MTH;
